@@ -1,0 +1,6 @@
+@FinancialLedgerEngine.Api_HostAddress = http://localhost:5171
+
+GET {{FinancialLedgerEngine.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,18 @@
+# .NET / C#
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+.idea/
+
+# Node / Frontend (pnpm)
+node_modules/
+dist/
+.pnpm-debug.log*
+*.local
+
+# OS / Temporal
+.DS_Store
+Thumbs.db
