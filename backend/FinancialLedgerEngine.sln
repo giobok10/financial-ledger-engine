@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialLedgerEngine.Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialLedgerEngine.Api", "FinancialLedgerEngine.Api\FinancialLedgerEngine.Api.csproj", "{6237A672-9F54-4FA7-B40B-BD6B4C72D1B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialLedgerEngine.Domain.Tests", "FinancialLedgerEngine.Domain.Tests\FinancialLedgerEngine.Domain.Tests.csproj", "{F341F50B-0C54-4A25-BC61-0293E95CEE07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{6237A672-9F54-4FA7-B40B-BD6B4C72D1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6237A672-9F54-4FA7-B40B-BD6B4C72D1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6237A672-9F54-4FA7-B40B-BD6B4C72D1B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F341F50B-0C54-4A25-BC61-0293E95CEE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F341F50B-0C54-4A25-BC61-0293E95CEE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F341F50B-0C54-4A25-BC61-0293E95CEE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F341F50B-0C54-4A25-BC61-0293E95CEE07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
