@@ -19,7 +19,22 @@ export function App() {
   };
 
   useEffect(() => {
-    fetchState();
+    let isMounted = true;
+
+    ledgerApi
+      .getState()
+      .then((data) => {
+        if (isMounted) {
+          setState(data);
+        }
+      })
+      .catch((err) => {
+        console.error("Error conectando al backend:", err);
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const handlePopulate = async () => {
@@ -49,7 +64,7 @@ export function App() {
       const res = await ledgerApi.reverse(false);
       setTelemetry(res);
       await fetchState();
-    } catch (err: unknown) {
+    } catch {
       setTelemetry({
         algorithmUsed: "Recursivo (Legacy)",
         executionTimeTicks: 0,
@@ -86,7 +101,7 @@ export function App() {
       }}
     >
       <h1>Financial Ledger & Audit Reversal Engine</h1>
-      <p style={{ color: "#94a3b8" }}>
+      <p style={{ color: "#5c5f64" }}>
         Panel de Telemetría para Comparación de Algoritmos de Inversión Contable
         en Tiempo Real (.NET 8 + React 19).
       </p>
@@ -94,7 +109,7 @@ export function App() {
       <div
         style={{
           padding: "20px",
-          backgroundColor: "#1e293b",
+          backgroundColor: "#f5f8ff",
           borderRadius: "8px",
           marginBottom: "20px",
         }}
@@ -132,8 +147,8 @@ export function App() {
             padding: "10px",
             borderRadius: "6px",
             border: "1px solid #475569",
-            backgroundColor: "#0f172a",
-            color: "#fff",
+            backgroundColor: "#f5f8ff",
+            color: "#333333",
           }}
         />
         <button

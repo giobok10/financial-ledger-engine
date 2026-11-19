@@ -15,9 +15,9 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
       <div
         style={{
           padding: "20px",
-          backgroundColor: "#1e293b",
+          backgroundColor: "#f5f8ff",
           borderRadius: "8px",
-          color: "#38bdf8",
+          color: "#1d607c",
         }}
       >
         Procesando algoritmo en memoria RAM...
@@ -30,9 +30,9 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
       <div
         style={{
           padding: "20px",
-          backgroundColor: "#1e293b",
+          backgroundColor: "#f5f8ff",
           borderRadius: "8px",
-          color: "#94a3b8",
+          color: "#5c5f64",
         }}
       >
         Selecciona una operación para medir telemetría.
@@ -44,14 +44,14 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
     <div
       style={{
         padding: "20px",
-        backgroundColor: result.success ? "#0f172a" : "#450a0a",
+        backgroundColor: result.success ? "#f5f8ff" : "#ffcfcf",
         borderRadius: "8px",
-        border: `1px solid ${result.success ? "#3b82f6" : "#ef4444"}`,
+        border: `1px solid ${result.success ? "#b0b3b8" : "#dba4a4"}`,
         marginTop: "20px",
       }}
     >
       <h3
-        style={{ color: result.success ? "#60a5fa" : "#fca5a5", marginTop: 0 }}
+        style={{ color: result.success ? "#1559ac" : "#700000", marginTop: 0 }}
       >
         Telemetría: {result.algorithmUsed}
       </h3>
@@ -65,7 +65,7 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
           }}
         >
           <div>
-            <span style={{ color: "#94a3b8", fontSize: "0.9em" }}>
+            <span style={{ color: "#333333", fontSize: "0.9em" }}>
               Ticks de CPU:
             </span>
             <p
@@ -73,14 +73,14 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
                 fontSize: "1.4em",
                 fontWeight: "bold",
                 margin: "5px 0",
-                color: "#f8fafc",
+                color: "#535353",
               }}
             >
               {result.executionTimeTicks.toLocaleString()} ticks
             </p>
           </div>
           <div>
-            <span style={{ color: "#94a3b8", fontSize: "0.9em" }}>
+            <span style={{ color: "#333333", fontSize: "0.9em" }}>
               Tiempo Transcurrido:
             </span>
             <p
@@ -88,14 +88,14 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
                 fontSize: "1.4em",
                 fontWeight: "bold",
                 margin: "5px 0",
-                color: "#34d399",
+                color: "#18805a",
               }}
             >
               {result.executionTimeMs.toFixed(4)} ms
             </p>
           </div>
           <div>
-            <span style={{ color: "#94a3b8", fontSize: "0.9em" }}>
+            <span style={{ color: "#333333", fontSize: "0.9em" }}>
               Memoria Auxiliar Heap:
             </span>
             <p
@@ -103,14 +103,14 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
                 fontSize: "1.4em",
                 fontWeight: "bold",
                 margin: "5px 0",
-                color: "#a78bfa",
+                color: "#5d3fb6",
               }}
             >
               {result.memoryAllocatedBytes} bytes (O(1))
             </p>
           </div>
           <div>
-            <span style={{ color: "#94a3b8", fontSize: "0.9em" }}>
+            <span style={{ color: "#333333", fontSize: "0.9em" }}>
               Nodos Procesados:
             </span>
             <p
@@ -118,7 +118,7 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
                 fontSize: "1.4em",
                 fontWeight: "bold",
                 margin: "5px 0",
-                color: "#f8fafc",
+                color: "#535353",
               }}
             >
               {result.nodesProcessed.toLocaleString()}
@@ -126,7 +126,7 @@ export const TelemetryPanel: React.FC<TelemetryPanelProps> = ({
           </div>
         </div>
       ) : (
-        <div style={{ color: "#fca5a5" }}>
+        <div style={{ color: "#b42121" }}>
           <p>
             <strong>ALERTA DE SISTEMA:</strong>{" "}
             {result.errorMessage ||
